@@ -26,17 +26,34 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="21.628479"
-     inkscape:cy="26.240653"
+     inkscape:cx="-19.1909"
+     inkscape:cy="19.304622"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer5"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="24,24"
+       orientation="0,1"
+       id="guide850"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="24,24"
+       orientation="1,0"
+       id="guide852"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -45,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,5 +70,76 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-284.29999)" />
+     transform="translate(0,-284.29999)">
+    <ellipse
+       style="fill:#231f20;fill-opacity:1;stroke:#eceaeb;stroke-width:2.30410242;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path812"
+       cx="24.000002"
+       cy="308.29999"
+       rx="20.84795"
+       ry="20.847948" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Ebene 2">
+    <rect
+       style="fill:#eceaeb;fill-opacity:1;stroke:none;stroke-width:1.59615457;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815"
+       width="40"
+       height="3"
+       x="4"
+       y="22.5"
+       ry="1.5"
+       rx="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Ebene 3">
+    <circle
+       style="fill:#eceaeb;fill-opacity:1;stroke:none;stroke-width:2.20554018;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path818"
+       cx="24"
+       cy="24"
+       r="7" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Ebene 4">
+    <circle
+       style="fill:#231f21;fill-opacity:1;stroke:none;stroke-width:2.68551755;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path823"
+       cx="24"
+       cy="24"
+       r="4" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Ebene 5">
+    <rect
+       style="fill:#231f21;fill-opacity:1;stroke:#cac5c8;stroke-width:2.26771665;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect826"
+       width="0.12626907"
+       height="16.920055"
+       x="23.873732"
+       y="7.0799451"
+       ry="0.063134536" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Ebene 6">
+    <rect
+       style="fill:#231f21;fill-opacity:1;stroke:#91888d;stroke-width:1.61787224;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect826-6"
+       width="0.089661255"
+       height="12.128435"
+       x="3.2422142"
+       y="34.05349"
+       ry="0.045255356"
+       transform="matrix(0.71784483,-0.69620313,0.63453789,0.77289175,0,0)" />
+  </g>
 </svg>
