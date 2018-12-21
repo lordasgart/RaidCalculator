@@ -2,15 +2,15 @@ image: Visual Studio 2017
 configuration: Release
 environment:
   keystore-password:
-    secure: AuYtvfURKiNNrIb/UIAgP/CoHSZQ/pDJcr9g62l7cLg=
+    secure: RTlsGiH2xsMnw1X/3addQWtrYzwDAwIO9eY69ObqrUs=
 before_build:
-- cmd: nuget restore AVF.Android.sln
+- cmd: nuget restore RaidCalculator.sln
 build:
-  project: AVF.Android.sln
+  project: RaidCalculator.sln
 build_script:
-  - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "/p:AndroidKeyStore=true" "/p:AndroidSigningKeyAlias=AVF.MemberManagement" "/p:AndroidSigningKeyPass=%keystore-password%" "/p:AndroidSigningKeyStore=AVF.CourseParticipation.keystore" "/p:AndroidSigningStorePass=%keystore-password%" "./AVF.CourseParticipation/AVF.CourseParticipation.Android/AVF.CourseParticipation.Android.csproj"
+  - msbuild "/t:SignAndroidPackage" "/p:Configuration=Release" "/p:AndroidKeyStore=true" "/p:AndroidSigningKeyAlias=RaidCalculator" "/p:AndroidSigningKeyPass=%keystore-password%" "/p:AndroidSigningKeyStore=RaidCalculator.keystore" "/p:AndroidSigningStorePass=%keystore-password%" "./src/RaidCalculator.Android/RaidCalculator.Android.csproj"
 artifacts:
-  - path: AVF.CourseParticipation\AVF.CourseParticipation.Android\bin\Release\de.aikido_forchheim.courseparticipation-Signed.apk
+  - path: src\RaidCalculator.Android\bin\Release\one.malz.raidcalculator-Signed.apk
 test: off
 branches:
   only:
