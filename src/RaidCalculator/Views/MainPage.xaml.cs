@@ -13,5 +13,10 @@ namespace RaidCalculator.Views
         {
             InitializeComponent();
         }
+
+        private void MainPage_OnAppearing(object sender, EventArgs e)
+        {
+            ArenaNameEntry.Focus();
+        }
     }
 }

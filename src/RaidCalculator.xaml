@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is compatible with Silverlight-->
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg8" Width="48" Height="48">
+  <Canvas.RenderTransform>
+    <TranslateTransform X="0" Y="0"/>
+  </Canvas.RenderTransform>
+  <Canvas.Resources/>
+  <!--Unknown tag: sodipodi:namedview-->
+  <!--Unknown tag: metadata-->
+  <Canvas Name="layer1">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="0" Y="-284.29999"/>
+    </Canvas.RenderTransform>
+    <Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="3.2" Width="41.7" Canvas.Top="287.5" Height="41.7" Name="path812" Fill="#FF231F20" StrokeThickness="2.30410242" Stroke="#FFECEAEB" StrokeMiterLimit="4"/>
+  </Canvas>
+  <Canvas Name="layer2">
+    <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="4" Canvas.Top="22.5" Width="40" Height="3" RadiusX="0" RadiusY="1.5" Name="rect815" Fill="#FFECEAEB" StrokeThickness="1.59615457" StrokeMiterLimit="4"/>
+  </Canvas>
+  <Canvas Name="layer3">
+    <Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="17" Canvas.Top="17" Width="14" Height="14" Name="path818" Fill="#FFECEAEB" StrokeThickness="2.20554018" StrokeMiterLimit="4"/>
+  </Canvas>
+  <Canvas Name="layer4">
+    <Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="20" Canvas.Top="20" Width="8" Height="8" Name="path823" Fill="#FF231F21" StrokeThickness="2.68551755" StrokeMiterLimit="4"/>
+  </Canvas>
+  <Canvas Name="layer5">
+    <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="23.873732" Canvas.Top="7.0799451" Width="0.12626907" Height="16.920055" RadiusY="0.063134536" RadiusX="0.063134536" Name="rect826" Fill="#FF231F21" StrokeThickness="2.26771665" Stroke="#FFCAC5C8" StrokeMiterLimit="4"/>
+  </Canvas>
+  <Canvas Name="layer6">
+    <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="3.2422142" Canvas.Top="34.05349" Width="0.089661255" Height="12.128435" RadiusY="0.045255356" RadiusX="0.045255356" Name="rect8266" Fill="#FF231F21" StrokeThickness="1.61787224" Stroke="#FF91888D" StrokeMiterLimit="4">
+      <Rectangle.RenderTransform>
+        <MatrixTransform Matrix="0.71784483 -0.69620313 0.63453789 0.77289175 0 0"/>
+      </Rectangle.RenderTransform>
+    </Rectangle>
+  </Canvas>
+</Canvas>

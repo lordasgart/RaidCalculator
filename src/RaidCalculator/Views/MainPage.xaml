@@ -2,10 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RaidCalculator.Views.MainPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}" Padding="32" Appearing="MainPage_OnAppearing">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+
+        <Image x:Name="Logo" WidthRequest="128" VerticalOptions="FillAndExpand" HorizontalOptions="Center" >
+            <Image.Source>
+                <UriImageSource CacheValidity="1" CachingEnabled="True" Uri="https://raw.githubusercontent.com/lordasgart/RaidCalculator/master/src/RaidCalculator.png">
+                </UriImageSource>
+            </Image.Source>
+        </Image>
+
+        <Label Text="Arenaname:"></Label>
+        <Entry x:Name="ArenaNameEntry" Text="{Binding ArenaName}" />
+        <Label Text="Stunden:"></Label>
+        <Entry Text="{Binding Hours}"></Entry>
+        <Label Text="Minuten:"></Label>
+        <Entry Text="{Binding Minutes}"></Entry>
+        <Label Text="Sekunden:"></Label>
+        <Entry Text="{Binding Seconds}"></Entry>
+        <Label Text="Hat schon begonnen:"></Label>
+        <Switch IsToggled="{Binding IsAlreadyStarted}"></Switch>
+        <Button Text="Get MessageText" Command="{Binding GetMessageTextCommand}"></Button>
+        <Entry Text="{Binding MessageText}" />
     </StackLayout>
 
 </ContentPage>
