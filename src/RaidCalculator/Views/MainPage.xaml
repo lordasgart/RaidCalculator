@@ -15,16 +15,19 @@
 
         <Label Text="Arenaname:"></Label>
         <Entry x:Name="ArenaNameEntry" Text="{Binding ArenaName}" />
-        <Label Text="Stunden:"></Label>
-        <Entry Text="{Binding Hours}"></Entry>
-        <Label Text="Minuten:"></Label>
-        <Entry Text="{Binding Minutes}"></Entry>
-        <Label Text="Sekunden:"></Label>
-        <Entry Text="{Binding Seconds}"></Entry>
         <Label Text="Hat schon begonnen:"></Label>
         <Switch IsToggled="{Binding IsAlreadyStarted}"></Switch>
-        <Button Text="Get MessageText" Command="{Binding GetMessageTextCommand}"></Button>
+        <Label Text="Zeit:"></Label>
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding Hours}" Keyboard="Numeric"></Entry>
+            <Label Text=":"></Label>
+            <Entry Text="{Binding Minutes}" Keyboard="Numeric"></Entry>
+            <Label Text=":"></Label>
+            <Entry Text="{Binding Seconds}" Keyboard="Numeric"></Entry>
+            <Button Text="Calc" Command="{Binding GetMessageTextCommand}"></Button>
+        </StackLayout>
         <Entry Text="{Binding MessageText}" />
+        <Button Text="Copy" Command="{Binding CopyCommand}"></Button>
     </StackLayout>
 
 </ContentPage>

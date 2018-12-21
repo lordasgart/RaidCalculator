@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using RaidCalculator.Services;
+using Plugin.Clipboard;
 
 namespace RaidCalculator.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        private string _messageText;
+        private string _messageText = string.Empty;
 
         public string MessageText
         {
@@ -20,7 +21,7 @@ namespace RaidCalculator.ViewModels
             set => SetProperty(ref _messageText, value);
         }
 
-        private string _arenaName;
+        private string _arenaName = string.Empty;
 
         public string ArenaName
         {
@@ -66,6 +67,7 @@ namespace RaidCalculator.ViewModels
             Title = "Calculator";
 
             GetMessageTextCommand = new DelegateCommand(GetMessageText, CanGetMessageText);
+            CopyCommand = new DelegateCommand(Copy, CanCopy);
         }
 
         #region GetMessageTextCommand
@@ -87,6 +89,22 @@ namespace RaidCalculator.ViewModels
         }
 
         private bool CanGetMessageText()
+        {
+            return true;
+        }
+
+        #endregion
+
+        #region CopyCommand
+
+        public ICommand CopyCommand { get; }
+
+        private void Copy()
+        {
+            CrossClipboard.Current.SetText(MessageText);
+        }
+
+        private bool CanCopy()
         {
             return true;
         }

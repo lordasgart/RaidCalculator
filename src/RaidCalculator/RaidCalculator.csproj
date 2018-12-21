@@ -7,6 +7,13 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.1.0.431" />
+    <PackageReference Include="Xamarin.Plugins.Clipboard" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Plugin.Clipboard">
+      <HintPath>..\..\..\..\..\..\Users\lordasgart\.nuget\packages\xamarin.plugins.clipboard\2.2.1\lib\Xamarin.iOS10\Plugin.Clipboard.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
