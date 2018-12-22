@@ -6,13 +6,14 @@
 
     <StackLayout HorizontalOptions="Fill" VerticalOptions="Start">
 
-        <Image x:Name="Logo" WidthRequest="128" VerticalOptions="FillAndExpand" HorizontalOptions="Center" >
+        <Image x:Name="Logo" WidthRequest="128" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="32">
             <Image.Source>
                 <UriImageSource CacheValidity="1" CachingEnabled="True" Uri="https://raw.githubusercontent.com/lordasgart/RaidCalculator/master/src/RaidCalculator.png">
                 </UriImageSource>
             </Image.Source>
         </Image>
 
+        <Picker ItemsSource="{Binding RaidTypes}" SelectedItem="{Binding RaidType}" ItemDisplayBinding="{Binding DisplayText}"></Picker>
         <Label Text="Arenaname:"></Label>
         <Entry x:Name="ArenaNameEntry" Text="{Binding ArenaName}" />
         <StackLayout Orientation="Horizontal">
@@ -28,9 +29,9 @@
             <Entry Text="{Binding Seconds}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
             <Button Text="Berechnen" Command="{Binding GetMessageTextCommand}" HorizontalOptions="End"></Button>
         </StackLayout>
-        <Entry Text="{Binding MessageText}" />
-        <Button Text="Kopieren" Command="{Binding CopyCommand}"></Button>
-        <Button Text="Teilen" Command="{Binding ShareCommand}"></Button>
+        <Entry Text="{Binding MessageText}" Margin="32"/>
+        <Button Text="Kopieren" Command="{Binding CopyCommand}" Margin="16"></Button>
+        <Button Text="Teilen" Command="{Binding ShareCommand}" Margin="16"></Button>
     </StackLayout>
 
 </ContentPage>

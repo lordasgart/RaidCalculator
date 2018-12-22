@@ -8,6 +8,8 @@ namespace RaidCalculator.Models
     {
         public string Title { get; set; }
 
+        public string DisplayText { get; set; }
+
         public TimeSpan Duration { get; set; }
 
         public int Level { get; set; }

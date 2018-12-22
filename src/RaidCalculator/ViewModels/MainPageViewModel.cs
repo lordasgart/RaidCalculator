@@ -65,6 +65,19 @@ namespace RaidCalculator.ViewModels
             set => SetProperty(ref _isAlreadyStarted, value);
         }
 
+        public IEnumerable<RaidType> RaidTypes
+        {
+            get => _raidTypes;
+        }
+
+        private RaidType _raidType;
+
+        public RaidType RaidType
+        {
+            get => _raidType;
+            set => SetProperty(ref _raidType, value);
+        }
+
         public MainPageViewModel(INavigationService navigationService, IEnumerable<RaidType> raidTypes)
             : base(navigationService)
         {
@@ -81,6 +94,8 @@ namespace RaidCalculator.ViewModels
             var shareCommand = new DelegateCommand(Share, CanShare);
             shareCommand.ObservesProperty(() => MessageText);
             ShareCommand = shareCommand;
+
+            RaidType = _raidTypes.Last();
         }
 
         #region GetMessageTextCommand
@@ -98,7 +113,7 @@ namespace RaidCalculator.ViewModels
             TimeSpan timeSpan = new TimeSpan(Hours, Minutes, Seconds);
             var result = calculator.GetStartTimeFromTimeUntilStart(timeSpan);
 
-            MessageText = $"{ArenaName} {timeString} {result.Hour.ToString().PadLeft(2,'0')}:{result.Minute.ToString().PadLeft(2, '0')}";
+            MessageText = $"{RaidType.Title} {ArenaName.Trim()} {timeString} {result.Hour.ToString().PadLeft(2,'0')}:{result.Minute.ToString().PadLeft(2, '0')}";
         }
 
         private bool CanGetMessageText()
@@ -119,7 +134,7 @@ namespace RaidCalculator.ViewModels
 
         private bool CanCopy()
         {
-            return !string.IsNullOrWhiteSpace(MessageText);
+            return CanShareAndCopy();
         }
 
         #endregion
@@ -136,7 +151,12 @@ namespace RaidCalculator.ViewModels
 
         private bool CanShare()
         {
-            return !string.IsNullOrWhiteSpace(MessageText);
+            return CanShareAndCopy();
+        }
+
+        private bool CanShareAndCopy()
+        {
+            return !string.IsNullOrWhiteSpace(MessageText) && !string.IsNullOrWhiteSpace(ArenaName);
         }
 
         #endregion

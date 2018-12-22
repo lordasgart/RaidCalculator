@@ -33,11 +33,11 @@ namespace RaidCalculator
         {
             var raidTypes = new List<RaidType>
             {
-                new RaidType() {Level = 1, Title = "1er", Duration = new TimeSpan(0, 45, 0)},
-                new RaidType() {Level = 2, Title = "2er", Duration = new TimeSpan(0, 45, 0)},
-                new RaidType() {Level = 3, Title = "3er", Duration = new TimeSpan(0, 45, 0)},
-                new RaidType() {Level = 4, Title = "4er", Duration = new TimeSpan(0, 45, 0)},
-                new RaidType() {Level = 5, Title = "5er", Duration = new TimeSpan(0, 45, 0)}
+                new RaidType() {Level = 1, Title = "1er", DisplayText = "☆", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 2, Title = "2er", DisplayText = "☆☆", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 3, Title = "3er", DisplayText = "☆☆☆", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 4, Title = "4er", DisplayText = "☆☆☆☆", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 5, Title = "5er", DisplayText = "☆☆☆☆☆", Duration = new TimeSpan(0, 45, 0)}
             };
 
             containerRegistry.RegisterInstance(typeof(IEnumerable<RaidType>), raidTypes);
