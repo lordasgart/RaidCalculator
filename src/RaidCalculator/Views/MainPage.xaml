@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RaidCalculator.Views.MainPage"
-             Title="{Binding Title}" Padding="32" Appearing="MainPage_OnAppearing">
+             Title="{Binding Title}" Padding="32,16,32,16" Appearing="MainPage_OnAppearing">
 
     <StackLayout HorizontalOptions="Fill" VerticalOptions="Start">
 
-        <Image x:Name="Logo" WidthRequest="128" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="32">
+        <Image x:Name="Logo" WidthRequest="128" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Margin="16">
             <Image.Source>
                 <UriImageSource CacheValidity="1" CachingEnabled="True" Uri="https://raw.githubusercontent.com/lordasgart/RaidCalculator/master/src/RaidCalculator.png">
                 </UriImageSource>
@@ -21,17 +21,17 @@
             <Switch IsToggled="{Binding IsAlreadyStarted}"></Switch>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Zeit:" VerticalOptions="Center"></Label>
-            <Entry Text="{Binding Hours}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
-            <Label Text=":" HorizontalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-            <Entry Text="{Binding Minutes}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
-            <Label Text=":" HorizontalTextAlignment="Center"  HorizontalOptions="Start" VerticalOptions="Center"></Label>
-            <Entry Text="{Binding Seconds}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
+            <Label Text="Zeit:" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+            <Entry Text="{Binding Hours}" Keyboard="Numeric" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Entry>
+            <Label Text=":" HorizontalTextAlignment="Center" HorizontalOptions="Fill" VerticalOptions="Center"></Label>
+            <Entry Text="{Binding Minutes}" Keyboard="Numeric" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Entry>
+            <Label Text=":" HorizontalTextAlignment="Center"  HorizontalOptions="Fill" VerticalOptions="Center"></Label>
+            <Entry Text="{Binding Seconds}" Keyboard="Numeric" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"></Entry>
             <Button Text="Berechnen" Command="{Binding GetMessageTextCommand}" HorizontalOptions="End"></Button>
         </StackLayout>
-        <Entry Text="{Binding MessageText}" Margin="32"/>
-        <Button Text="Kopieren" Command="{Binding CopyCommand}" Margin="16"></Button>
-        <Button Text="Teilen" Command="{Binding ShareCommand}" Margin="16"></Button>
+        <Entry Text="{Binding MessageText}" Margin="6,6,6,0"/>
+        <Button Text="Kopieren" Command="{Binding CopyCommand}" Margin="6,0,6,6"></Button>
+        <Button Text="Teilen" Command="{Binding ShareCommand}" Margin="6"></Button>
     </StackLayout>
 
 </ContentPage>
