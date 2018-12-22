@@ -8,11 +8,15 @@ using System.Text;
 using System.Windows.Input;
 using RaidCalculator.Services;
 using Plugin.Clipboard;
+using Plugin.Share;
+using Plugin.Share.Abstractions;
+using RaidCalculator.Models;
 
 namespace RaidCalculator.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        private readonly IEnumerable<RaidType> _raidTypes;
         private string _messageText = string.Empty;
 
         public string MessageText
@@ -61,13 +65,16 @@ namespace RaidCalculator.ViewModels
             set => SetProperty(ref _isAlreadyStarted, value);
         }
 
-        public MainPageViewModel(INavigationService navigationService)
+        public MainPageViewModel(INavigationService navigationService, IEnumerable<RaidType> raidTypes)
             : base(navigationService)
         {
+            _raidTypes = raidTypes;
+
             Title = "Calculator";
 
             GetMessageTextCommand = new DelegateCommand(GetMessageText, CanGetMessageText);
             CopyCommand = new DelegateCommand(Copy, CanCopy);
+            ShareCommand = new DelegateCommand(Share, CanShare);
         }
 
         #region GetMessageTextCommand
@@ -106,6 +113,25 @@ namespace RaidCalculator.ViewModels
 
         private bool CanCopy()
         {
+            //return !string.IsNullOrWhiteSpace(MessageText);
+            return true;
+        }
+
+        #endregion
+
+        #region ShareCommand
+
+        public ICommand ShareCommand { get; }
+
+        private void Share()
+        {
+            var shareMessage = new ShareMessage { Text = MessageText };
+            CrossShare.Current.Share(shareMessage);
+        }
+
+        private bool CanShare()
+        {
+            //return !string.IsNullOrWhiteSpace(MessageText);
             return true;
         }
 

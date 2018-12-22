@@ -1,5 +1,8 @@
-﻿using Prism;
+﻿using System;
+using System.Collections.Generic;
+using Prism;
 using Prism.Ioc;
+using RaidCalculator.Models;
 using RaidCalculator.ViewModels;
 using RaidCalculator.Views;
 using Xamarin.Forms;
@@ -28,6 +31,17 @@ namespace RaidCalculator
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            var raidTypes = new List<RaidType>
+            {
+                new RaidType() {Level = 1, Title = "1er", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 2, Title = "2er", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 3, Title = "3er", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 4, Title = "4er", Duration = new TimeSpan(0, 45, 0)},
+                new RaidType() {Level = 5, Title = "5er", Duration = new TimeSpan(0, 45, 0)}
+            };
+
+            containerRegistry.RegisterInstance(typeof(IEnumerable<RaidType>), raidTypes);
+
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }

@@ -4,7 +4,7 @@
              x:Class="RaidCalculator.Views.MainPage"
              Title="{Binding Title}" Padding="32" Appearing="MainPage_OnAppearing">
 
-    <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Start">
 
         <Image x:Name="Logo" WidthRequest="128" VerticalOptions="FillAndExpand" HorizontalOptions="Center" >
             <Image.Source>
@@ -15,19 +15,22 @@
 
         <Label Text="Arenaname:"></Label>
         <Entry x:Name="ArenaNameEntry" Text="{Binding ArenaName}" />
-        <Label Text="Hat schon begonnen:"></Label>
-        <Switch IsToggled="{Binding IsAlreadyStarted}"></Switch>
-        <Label Text="Zeit:"></Label>
         <StackLayout Orientation="Horizontal">
-            <Entry Text="{Binding Hours}" Keyboard="Numeric"></Entry>
-            <Label Text=":"></Label>
-            <Entry Text="{Binding Minutes}" Keyboard="Numeric"></Entry>
-            <Label Text=":"></Label>
-            <Entry Text="{Binding Seconds}" Keyboard="Numeric"></Entry>
-            <Button Text="Calc" Command="{Binding GetMessageTextCommand}"></Button>
+            <Label Text="Hat schon begonnen:"  VerticalOptions="Center"></Label>
+            <Switch IsToggled="{Binding IsAlreadyStarted}"></Switch>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Zeit:" VerticalOptions="Center"></Label>
+            <Entry Text="{Binding Hours}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
+            <Label Text=":" HorizontalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+            <Entry Text="{Binding Minutes}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
+            <Label Text=":" HorizontalTextAlignment="Center"  HorizontalOptions="Start" VerticalOptions="Center"></Label>
+            <Entry Text="{Binding Seconds}" Keyboard="Numeric" HorizontalOptions="StartAndExpand"></Entry>
+            <Button Text="Berechnen" Command="{Binding GetMessageTextCommand}" HorizontalOptions="End"></Button>
         </StackLayout>
         <Entry Text="{Binding MessageText}" />
-        <Button Text="Copy" Command="{Binding CopyCommand}"></Button>
+        <Button Text="Kopieren" Command="{Binding CopyCommand}"></Button>
+        <Button Text="Teilen" Command="{Binding ShareCommand}"></Button>
     </StackLayout>
 
 </ContentPage>
