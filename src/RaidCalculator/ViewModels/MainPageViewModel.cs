@@ -73,8 +73,14 @@ namespace RaidCalculator.ViewModels
             Title = "Calculator";
 
             GetMessageTextCommand = new DelegateCommand(GetMessageText, CanGetMessageText);
-            CopyCommand = new DelegateCommand(Copy, CanCopy);
-            ShareCommand = new DelegateCommand(Share, CanShare);
+
+            var copyCommand = new DelegateCommand(Copy, CanCopy);
+            copyCommand.ObservesProperty(() => MessageText);
+            CopyCommand = copyCommand;
+
+            var shareCommand = new DelegateCommand(Share, CanShare);
+            shareCommand.ObservesProperty(() => MessageText);
+            ShareCommand = shareCommand;
         }
 
         #region GetMessageTextCommand
@@ -113,8 +119,7 @@ namespace RaidCalculator.ViewModels
 
         private bool CanCopy()
         {
-            //return !string.IsNullOrWhiteSpace(MessageText);
-            return true;
+            return !string.IsNullOrWhiteSpace(MessageText);
         }
 
         #endregion
@@ -131,8 +136,7 @@ namespace RaidCalculator.ViewModels
 
         private bool CanShare()
         {
-            //return !string.IsNullOrWhiteSpace(MessageText);
-            return true;
+            return !string.IsNullOrWhiteSpace(MessageText);
         }
 
         #endregion
